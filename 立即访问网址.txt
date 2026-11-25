@@ -1,5 +1,5 @@
 临时公网学习地址：
-https://6cee558c6ecec2.app.lhr.life/#/atlas
+https://ad5658127d8fd9.app.lhr.life/#/atlas
 
 本机学习地址：
 http://127.0.0.1:5188/#/atlas
