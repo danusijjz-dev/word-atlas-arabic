@@ -1,0 +1,9 @@
+临时公网学习地址：
+https://6cee558c6ecec2.app.lhr.life/#/atlas
+
+本机学习地址：
+http://127.0.0.1:5188/#/atlas
+
+公网地址依赖当前电脑、Python 本地服务器和 localhost.run 隧道保持运行。
+关闭终端或电脑重启后，请重新双击“启动学习版.command”获取本机地址。
+需要长期固定网址时，请按“使用说明.md”把本文件夹上传到自己的 GitHub 仓库并启用 GitHub Pages。
