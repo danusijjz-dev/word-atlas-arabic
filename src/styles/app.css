@@ -1,3 +1,40 @@
+@font-face {
+  font-family: "Source Serif 4 Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url("../assets/fonts/source-serif-4-latin-ext.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Serif 4 Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url("../assets/fonts/source-serif-4-latin.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+    U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url("../assets/fonts/atkinson-latin-ext.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url("../assets/fonts/atkinson-latin.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+    U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* Word Atlas — design system
    Paper, ink and four field-guide pigments, matched to the illustration palette. */
 
@@ -30,8 +67,11 @@
   --shadow-sm: 0 1px 2px rgba(30, 38, 64, 0.06), 0 2px 6px -2px rgba(30, 38, 64, 0.06);
   --shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 1px 2px rgba(30, 38, 64, 0.05), 0 18px 40px -24px rgba(30, 38, 64, 0.28);
   --shadow-lg: 0 30px 80px -30px rgba(20, 26, 46, 0.45), 0 8px 24px -12px rgba(20, 26, 46, 0.2);
-  --serif: "Fraunces Variable", "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
-  --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Segoe UI", "Microsoft YaHei", "Noto Sans SC", Roboto, sans-serif;
+  --word-face: "Source Serif 4 Variable";
+  --word-weight: 600;
+  --word-opsz: 32;
+  --serif: var(--word-face), "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  --sans: "Atkinson Hyperlegible Next Variable", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Segoe UI", "Microsoft YaHei", "Noto Sans SC", Roboto, sans-serif;
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
   --r-sm: 10px;
   --r: 16px;
@@ -43,6 +83,9 @@
   --tab: 0px;
   --gutter: 20px;
   color-scheme: light;
+}
+[lang="en"] {
+  font-style: normal;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -224,7 +267,7 @@ code {
   font-size: clamp(30px, 4.6vw, 52px);
   line-height: 1.12;
   letter-spacing: -0.02em;
-  font-variation-settings: "opsz" 120;
+  font-variation-settings: "opsz" var(--word-opsz);
   text-wrap: balance;
 }
 .display small {
@@ -620,7 +663,7 @@ code {
   font: italic 500 14px/1 var(--serif);
   color: var(--ink-3);
   letter-spacing: 0.01em;
-  font-variation-settings: "opsz" 24;
+  font-variation-settings: "opsz" var(--word-opsz);
 }
 .topnav {
   display: none;
@@ -848,7 +891,7 @@ code {
 .mini-stats dd {
   margin: 2px 0 0;
   font: 600 24px/1.1 var(--serif);
-  font-variation-settings: "opsz" 48;
+  font-variation-settings: "opsz" var(--word-opsz);
   font-variant-numeric: tabular-nums;
 }
 .mini-stats dd small {
@@ -915,7 +958,7 @@ code {
   position: relative;
   font: italic 500 1px/1.05 var(--serif);
   font-size: clamp(14px, calc(150cqw / var(--len)), 22cqw);
-  font-variation-settings: "opsz" 72;
+  font-variation-settings: "opsz" var(--word-opsz);
   text-align: center;
   overflow-wrap: anywhere;
   letter-spacing: -0.01em;
@@ -990,7 +1033,7 @@ code {
   font-size: clamp(40px, 7vw, 64px);
   line-height: 1.02;
   letter-spacing: -0.025em;
-  font-variation-settings: "opsz" 144;
+  font-variation-settings: "opsz" var(--word-opsz);
   margin: 8px 0 12px;
   overflow-wrap: anywhere;
 }
@@ -1108,7 +1151,7 @@ code {
   grid-column: 2;
   font: italic 400 15px/1.45 var(--serif);
   color: var(--ink-3);
-  font-variation-settings: "opsz" 14;
+  font-variation-settings: "opsz" var(--word-opsz);
 }
 .block {
   margin-top: 26px;
@@ -1127,7 +1170,7 @@ code {
 }
 .ex-en {
   font: 400 19px/1.5 var(--serif);
-  font-variation-settings: "opsz" 24;
+  font-variation-settings: "opsz" var(--word-opsz);
   color: var(--ink);
   text-wrap: pretty;
 }
@@ -1165,7 +1208,7 @@ code {
 }
 .collocations span {
   font: 500 16px/1.35 var(--serif);
-  font-variation-settings: "opsz" 18;
+  font-variation-settings: "opsz" var(--word-opsz);
 }
 .collocations small {
   color: var(--ink-3);
@@ -1406,7 +1449,7 @@ code {
 }
 .palette-word {
   font: 600 18px var(--serif);
-  font-variation-settings: "opsz" 24;
+  font-variation-settings: "opsz" var(--word-opsz);
 }
 .palette-zh {
   color: var(--ink-3);
@@ -1557,7 +1600,7 @@ code {
 .journey h2 {
   font: 600 clamp(34px, 6vw, 56px) / 1.05 var(--serif);
   letter-spacing: -0.02em;
-  font-variation-settings: "opsz" 120;
+  font-variation-settings: "opsz" var(--word-opsz);
   text-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
   text-wrap: balance;
 }
@@ -1677,7 +1720,7 @@ code {
 }
 .wotd-word {
   font: 600 38px/1.05 var(--serif);
-  font-variation-settings: "opsz" 96;
+  font-variation-settings: "opsz" var(--word-opsz);
   letter-spacing: -0.02em;
   margin: 8px 0 10px;
   overflow-wrap: anywhere;
@@ -1741,7 +1784,7 @@ code {
 }
 .ring-body b {
   font: 600 30px/1 var(--serif);
-  font-variation-settings: "opsz" 72;
+  font-variation-settings: "opsz" var(--word-opsz);
   font-variant-numeric: tabular-nums;
 }
 .ring-body small {
@@ -2114,7 +2157,7 @@ code {
 }
 .tile-word {
   font: 600 18px/1.2 var(--serif);
-  font-variation-settings: "opsz" 24;
+  font-variation-settings: "opsz" var(--word-opsz);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2207,7 +2250,7 @@ code {
 }
 .row-word {
   font: 600 18px var(--serif);
-  font-variation-settings: "opsz" 24;
+  font-variation-settings: "opsz" var(--word-opsz);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2454,7 +2497,7 @@ code {
 }
 .cloze {
   font: 400 clamp(20px, 3.2vw, 26px) / 1.45 var(--serif);
-  font-variation-settings: "opsz" 30;
+  font-variation-settings: "opsz" var(--word-opsz);
   text-wrap: balance;
 }
 .cloze-sm {
@@ -2579,7 +2622,7 @@ code {
 }
 .options-en .option > .option-copy {
   font: 500 21px var(--serif);
-  font-variation-settings: "opsz" 30;
+  font-variation-settings: "opsz" var(--word-opsz);
 }
 .option kbd {
   flex: none;
@@ -3127,7 +3170,7 @@ code {
 .stat-strip dd {
   margin: 4px 0 0;
   font: 600 34px/1 var(--serif);
-  font-variation-settings: "opsz" 72;
+  font-variation-settings: "opsz" var(--word-opsz);
   font-variant-numeric: tabular-nums;
 }
 .stat-strip dd small {
@@ -3971,7 +4014,7 @@ a:hover .mark-needle,
 }
 .galaxy-tip b {
   font: 600 19px var(--serif);
-  font-variation-settings: "opsz" 30;
+  font-variation-settings: "opsz" var(--word-opsz);
 }
 .galaxy-tip small {
   font-size: 12.5px;

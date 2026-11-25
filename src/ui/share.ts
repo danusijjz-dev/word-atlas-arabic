@@ -1,7 +1,7 @@
 import type { Atlas, Entry } from "../atlas/types";
 import { toast } from "./Toast";
 
-const SERIF = '"Fraunces Variable", "Songti SC", "Noto Serif SC", Georgia, serif';
+const SERIF = '"Source Serif 4 Variable", "Songti SC", "Noto Serif SC", Georgia, serif';
 const SANS = '-apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif';
 const ARABIC = '"SF Arabic", "Geeza Pro", "Noto Naskh Arabic", "Amiri", serif';
 

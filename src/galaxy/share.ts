@@ -1,6 +1,6 @@
 import { toast } from "../ui/Toast";
 
-const SERIF = '"Fraunces Variable", "Songti SC", "Noto Serif SC", Georgia, serif';
+const SERIF = '"Source Serif 4 Variable", "Songti SC", "Noto Serif SC", Georgia, serif';
 const SANS = '-apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif';
 
 /** "My word galaxy": the live render framed as a 4:5 poster. */

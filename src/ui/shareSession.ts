@@ -4,7 +4,7 @@ import { Rating } from "../store/srs";
 import type { ActiveSession } from "../store/store";
 import { toast } from "./Toast";
 
-const SERIF = '"Fraunces Variable", "Songti SC", "Noto Serif SC", Georgia, serif';
+const SERIF = '"Source Serif 4 Variable", "Songti SC", "Noto Serif SC", Georgia, serif';
 const SANS = '-apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif';
 const ARABIC = '"SF Arabic", "Geeza Pro", "Noto Naskh Arabic", "Amiri", serif';
 
