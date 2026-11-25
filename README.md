@@ -8,7 +8,7 @@
 
 7,298 个雅思词条 · 原创插画 · 英美发音 · 带读音符号的阿拉伯语释义 · FSRS 间隔复习
 
-[**立即体验 ↗**](https://0xlei.tech/words/)　 /　 [48 秒介绍](docs/assets/launch.mp4)　 /　 [下载词库](data/)　 /　 [English](README.en.md)
+[**立即体验 ↗**](https://danusijjz-dev.github.io/word-atlas-arabic/)　 /　 [GitHub 仓库](https://github.com/danusijjz-dev/word-atlas-arabic)　 /　 [下载词库](data/)　 /　 [English](README.en.md)
 
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-17283B?style=flat-square)](LICENSE)
 [![Dataset: CC BY 4.0](https://img.shields.io/badge/Dataset-CC_BY_4.0-AD5038?style=flat-square)](CONTENT_LICENSE.md)
