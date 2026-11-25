@@ -129,6 +129,7 @@ export function EntryView({ entry, mode = "detail", eager = true }: { entry: Ent
                     <Speak url={exUrls[i] ?? null} text={x.en} accent={i === 1 && exUrls[1] ? "us" : accent} size="sm" className="ex-speak" />
                   </p>
                   <p className="ex-zh">{x.zh}</p>
+                  <ArabicGloss value={x.ar} className="ex-arabic" />
                 </li>
               ))}
             </ul>
@@ -140,11 +141,12 @@ export function EntryView({ entry, mode = "detail", eager = true }: { entry: Ent
             <h3 className="eyebrow">常用搭配</h3>
             <ul className="collocations">
               {entry.col.map((c) => {
-                const { en, zh } = splitPair(c);
+                const { en, zh, ar } = splitPair(c);
                 return (
                   <li key={c}>
                     <span lang="en">{en}</span>
                     {zh && <small>{zh}</small>}
+                    <ArabicGloss value={ar} className="collocation-arabic" />
                   </li>
                 );
               })}

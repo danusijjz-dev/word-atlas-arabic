@@ -1191,6 +1191,17 @@ code {
   color: var(--ink-3);
   font-size: 14.5px;
 }
+.ex-arabic {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 5px;
+  color: var(--ink-2);
+  font-size: 15.5px;
+  line-height: 1.95;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .collocations {
   list-style: none;
   margin: 0;
@@ -1206,13 +1217,21 @@ code {
   border: 1px solid var(--line);
   display: grid;
 }
-.collocations span {
+.collocations > li > span[lang="en"] {
   font: 500 16px/1.35 var(--serif);
   font-variation-settings: "opsz" var(--word-opsz);
 }
 .collocations small {
   color: var(--ink-3);
   font-size: 12.5px;
+}
+.collocation-arabic {
+  margin-top: 5px;
+  color: var(--ink-2);
+  font-size: 14px;
+  line-height: 1.9;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .relations {
   display: grid;
@@ -2518,6 +2537,16 @@ code {
   color: var(--ink-3);
   font-size: 14.5px;
 }
+.cloze-arabic {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  color: var(--ink-2);
+  font-size: 15.5px;
+  line-height: 1.95;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .prompt-listen {
   display: grid;
   justify-items: center;
@@ -2580,6 +2609,16 @@ code {
   margin-top: 8px;
   color: var(--ink-2);
   font-size: 18px;
+}
+.spell-example-arabic {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 7px;
+  color: var(--ink-2);
+  font-size: 15px;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .prompt-spell .speak {
   margin-top: 12px;
@@ -2833,6 +2872,16 @@ code {
   font: italic 400 15px/1.45 var(--serif);
   color: var(--ink-2);
 }
+.feedback-ex-arabic {
+  display: none;
+  max-width: 100%;
+  margin-top: 4px;
+  color: var(--ink-2);
+  font-size: 14px;
+  line-height: 1.9;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .feedback .btn {
   grid-column: 1 / -1;
   width: 100%;
@@ -2853,6 +2902,9 @@ code {
   }
   .feedback-ex {
     display: block;
+  }
+  .feedback-ex-arabic {
+    display: flex;
   }
   .feedback .btn {
     grid-column: auto;
@@ -3730,6 +3782,13 @@ a:hover .mark-needle,
   }
   .specimen {
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 559px) {
+  :root :is(.ex-arabic, .collocation-arabic, .cloze-arabic, .spell-example-arabic, .feedback-ex-arabic) {
+    font-size: 16px;
+    line-height: 1.95;
   }
 }
 

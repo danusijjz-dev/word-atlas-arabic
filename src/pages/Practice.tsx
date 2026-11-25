@@ -221,7 +221,7 @@ function TypingRound({ mode, entries, onExit, onAgain }: { mode: Mode; entries: 
             {e.ex[0].zh}
           </p>
         )}
-        <ArabicGloss value={ref?.ar} className="typing-arabic" />
+        <ArabicGloss value={mode === "word" ? ref?.ar : e.ex[0]?.ar} className="typing-arabic" />
         <p className={`typing-text ${mode === "word" ? "is-word" : ""} ${mode === "dictation" ? "is-hidden" : ""}`} lang="en" aria-hidden="true">
           {chars.map((ch, k) => {
             const t = typed[k];

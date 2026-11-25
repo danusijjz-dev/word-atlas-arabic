@@ -112,6 +112,16 @@ export async function renderWordCard(atlas: Atlas, e: Entry) {
       ctx.fillText(line, pad, y + 6);
       y += 44;
     }
+    if (e.ex[0].ar) {
+      ctx.save();
+      ctx.direction = "rtl";
+      ctx.textAlign = "right";
+      ctx.font = `500 29px ${ARABIC}`;
+      ctx.fillStyle = "#5E6476";
+      ctx.fillText(`(${e.ex[0].ar})`, W - pad, y + 8, art);
+      ctx.restore();
+      y += 44;
+    }
   }
   ctx.fillStyle = "rgba(30,38,64,.14)";
   ctx.fillRect(pad, H - 120, art, 2);

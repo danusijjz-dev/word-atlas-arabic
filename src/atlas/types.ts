@@ -12,6 +12,8 @@ export interface Sense {
 export interface Example {
   en: string;
   zh: string;
+  /** Arabic translation, fully vocalized with ḥarakāt. */
+  ar?: string;
 }
 
 export interface Entry {

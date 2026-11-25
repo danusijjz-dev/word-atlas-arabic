@@ -23,7 +23,7 @@
 
 ---
 
-Word Atlas is an illustrated IELTS vocabulary app for Chinese-speaking learners studying English and Arabic together. In the web edition, every entry pairs its Chinese definition with a short Arabic gloss that includes full vocalization (تشكيل). Connect words with scenes and pronunciation, practise active recall, and return to them with FSRS spaced repetition. No account required. Learning progress stays on your device.
+Word Atlas is an illustrated IELTS vocabulary app for Chinese-speaking learners studying English and Arabic together. In the web edition, every entry pairs its Chinese definition with a short Arabic gloss that includes full vocalization (تشكيل). All 14,596 examples and 24,722 collocations also include Arabic translations. Connect words with scenes and pronunciation, practise active recall, and return to them with FSRS spaced repetition. No account required. Learning progress stays on your device.
 
 > **Version scope:** This repository contains the open-source foundation of Word Atlas and its dataset. The hosted website evolves separately and may have different features. The code and dataset here remain available under their respective MIT and CC BY 4.0 licenses.
 
@@ -64,7 +64,7 @@ Explore 19 topic groups, rotate and zoom the galaxy, and select a star to open i
 
 | Step | What you do |
 | :--- | :--- |
-| **See** | Explore an illustration, Chinese and Arabic definitions, two original examples, collocations and usage notes. |
+| **See** | Explore an illustration, Chinese and Arabic definitions, bilingual examples, bilingual collocations and usage notes. |
 | **Hear** | Switch between UK and US pronunciation and listen to example sentences. A subset includes audio for the second example. |
 | **Recall** | Practise meaning-to-word, illustrated cloze, listening recognition and spelling. |
 | **Review** | Let FSRS schedule reviews based on your history. Only the first answer counts toward accuracy. |
@@ -89,7 +89,7 @@ Open **http://localhost:5188**.
 
 ```bash
 npm test             # Unit tests
-npm run check:arabic # Verify all 7,298 Arabic glosses and reading marks
+npm run check:arabic # Verify Arabic and reading marks for words, examples and collocations
 npm run check:atlas  # Dataset and media validation
 npm run build        # Production build in dist/
 ```

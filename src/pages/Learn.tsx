@@ -208,6 +208,7 @@ function Quiz({ step, session }: { step: Step & { kind: QuizKind }; session: Act
               )}
             </p>
             {sentence && pending && <p className="cloze-zh">{entry.ex[0].zh}</p>}
+            {sentence && pending && <ArabicGloss value={entry.ex[0].ar} className="cloze-arabic" />}
           </div>
         )}
         {step.kind === "listen" && (
@@ -283,6 +284,7 @@ function SpellPrompt({ entry, refw, hints }: { entry: Entry; refw: WordRef; hint
             {sentence.after}
           </p>
         )}
+        {sentence && <ArabicGloss value={entry.ex[0].ar} className="spell-example-arabic" />}
         <Speak url={atlas.audio(entry, accent)} text={entry.w} accent={accent} size="sm" label="听发音" />
       </div>
     </div>
@@ -372,6 +374,7 @@ function Feedback({ entry, refw, correct, onNext }: { entry: Entry; refw: WordRe
               <Highlight text={entry.ex[0].en} word={entry.w} />
             </p>
           )}
+          {entry.ex[0]?.ar && <ArabicGloss value={entry.ex[0].ar} className="feedback-ex-arabic" />}
         </div>
         <button ref={btn} className={`btn btn-xl ${correct ? "btn-sage" : "btn-terra"}`} onClick={onNext}>
           继续 <ArrowRight size={20} />
